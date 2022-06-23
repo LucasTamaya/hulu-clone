@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "HuluFont";
+  src: url(../public/src/fonts/iJWKBXyIfDnIV7nBrXyw023e.woff2) format("woff2");
+}
