@@ -1,8 +1,6 @@
 import React from "react";
 
 function Cover({ details, category, bgSrc }) {
-  console.log(bgSrc);
-
   return (
     <div
       className="w-full max-w-[294px] h-[450px] relative bg-cover cursor-pointer mx-auto"

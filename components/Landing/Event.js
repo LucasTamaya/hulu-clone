@@ -7,7 +7,6 @@ import liveSportsLogo3 from "../../public/src/images/live-sports-logo-3.svg";
 import liveSportsLogo4 from "../../public/src/images/live-sports-logo-4.png";
 
 function Event({ eventData }) {
-  console.log(eventData);
   const [index, setIndex] = useState(0);
 
   return (
@@ -15,7 +14,7 @@ function Event({ eventData }) {
       className="w-full h-[800px] bg-cover bg-center relative"
       style={{ backgroundImage: `url(${eventData[index].bgUrl})` }}
     >
-      <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-y-6 lg:items-start lg:pl-[320px] bg-black/30">
+      <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center pt-8 gap-y-6 sm:justify-center lg:items-start lg:pl-[320px] bg-black/30">
         <nav>
           <ul className="flex items-center gap-x-6">
             <li
@@ -39,7 +38,7 @@ function Event({ eventData }) {
           </ul>
         </nav>
 
-        <h2 className="text-white text-5xl font-bold mt-10">
+        <h2 className="text-white text-4xl sm:text-5xl font-bold mt-10">
           {eventData[index].title}
         </h2>
 
@@ -60,7 +59,7 @@ function Event({ eventData }) {
             <Image src={liveSportsLogo4} width={70} height={40} />
           </div>
         </div>
-        <p className="text-[#cccccc] text-xs text-center px-[140px] lg:text-left lg:px-0">
+        <p className="text-[#cccccc] text-xs text-center px-5 lg:text-left lg:px-0">
           Live TV plan required. Regional restrictions, blackouts and additional
           terms apply.{" "}
           <span className="underline cursor-pointer">See details</span>
