@@ -47,16 +47,36 @@ function Event({ eventData }) {
         </p>
         <div className="flex items-center gap-x-6">
           <div className="w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center">
-            <Image src={liveSportsLogo1} width={70} height={40} />
+            <Image
+              src={liveSportsLogo1}
+              width={70}
+              height={40}
+              alt="live sport logo"
+            />
           </div>
           <div className="w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center">
-            <Image src={liveSportsLogo2} width={70} height={40} />
+            <Image
+              src={liveSportsLogo2}
+              width={70}
+              height={40}
+              alt="live sport logo"
+            />
           </div>
           <div className="w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center">
-            <Image src={liveSportsLogo3} width={70} height={40} />
+            <Image
+              src={liveSportsLogo3}
+              width={70}
+              height={40}
+              alt="live sport logo"
+            />
           </div>
           <div className="w-[50px] h-[50px] rounded-full bg-white flex justify-center items-center">
-            <Image src={liveSportsLogo4} width={70} height={40} />
+            <Image
+              src={liveSportsLogo4}
+              width={70}
+              height={40}
+              alt="live sport logo"
+            />
           </div>
         </div>
         <p className="text-[#cccccc] text-xs text-center px-5 lg:text-left lg:px-0">

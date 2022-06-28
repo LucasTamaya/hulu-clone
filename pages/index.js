@@ -1,7 +1,6 @@
 import Image from "next/image";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-// import MediaQuery from "react-responsive";
 import { useMediaQuery } from "react-responsive";
 
 import huluLogos from "../public/src/images/logos.png";
@@ -20,7 +19,7 @@ export default function Home() {
     query: "(min-width: 640px)",
   });
 
-  // // Détecte lorsqu'on est sur un petit écran
+  // Détecte lorsqu'on est sur un petit écran
   const isSmallScreen = useMediaQuery({
     query: "(max-width: 640px)",
   });
@@ -33,7 +32,12 @@ export default function Home() {
             <h3 className="text-[#00ed82] text-sm uppercase font-bold sm:text-base">
               Bundle with any hulu plan & save
             </h3>
-            <Image src={huluLogos} width={600} height={150} />
+            <Image
+              src={huluLogos}
+              width={600}
+              height={150}
+              alt="hulu disney and espn logo"
+            />
             <h2 className="text-white font-bold text-lg sm:text-2xl text-center max-w-[670px]">
               Get endless entertainement, live sports, and the shows and movies
               you love.
@@ -44,7 +48,7 @@ export default function Home() {
             <div className="flex flex-col items-center gap-y-2">
               <p className="text-white/50 text-xs">
                 <span className="underline cursor-pointer">
-                  What's included?
+                  What&apos;s included?
                 </span>{" "}
                 See{" "}
                 <span className="underline cursor-pointer">Bundle terms.</span>
