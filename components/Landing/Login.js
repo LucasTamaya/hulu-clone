@@ -3,6 +3,7 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 import loginValidation from "../../utils/formValidationSchema/loginValidation";
 import AuthLoader from "../Loaders/AuthLoader";
@@ -13,6 +14,8 @@ function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState("");
+
+  const router = useRouter();
 
   const {
     control,
@@ -45,6 +48,7 @@ function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
       console.log("you're connected");
       setData("Successfull connexion !");
       setLoading(false);
+      router.push("/catalog");
     }
   };
 

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React, { useState } from "react";
+import Image from "next/image";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useMediaQuery } from "react-responsive";
@@ -65,7 +65,7 @@ export default function Home() {
               </p>
             </div>
             <div className="absolute top-5 left-5">
-              <Image src={huluLogo} width={60} height={20} />
+              <Image src={huluLogo} width={60} height={20} alt="Hulu official logo" />
             </div>
             <p
               className="text-white uppercase absolute top-5 right-5 cursor-pointer"

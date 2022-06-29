@@ -3,6 +3,7 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 import registerValidation from "../../utils/formValidationSchema/registerValidation";
 import AuthLoader from "../Loaders/AuthLoader";
@@ -13,6 +14,8 @@ function Register({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState("");
+
+  const router = useRouter();
 
   const {
     control,
@@ -44,6 +47,7 @@ function Register({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
       console.log("you're connected");
       setData("Successfull connexion !");
       setLoading(false);
+      router.push("/catalog");
     }
   }
 
@@ -65,7 +69,7 @@ function Register({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
             <h3 className="font-bold text-2xl">Register</h3>
             <div>
               <label
-                for="email"
+                htmlFor="email"
                 className="uppercase text-sm font-bold text-[#838383] block mb-2"
               >
                 Email
@@ -95,7 +99,7 @@ function Register({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
             </div>
             <div>
               <label
-                for="username"
+                htmlFor="username"
                 className="uppercase text-sm font-bold text-[#838383] block mb-2"
               >
                 Username
@@ -125,7 +129,7 @@ function Register({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
             </div>
             <div>
               <label
-                for="password"
+                htmlFor="password"
                 className="uppercase text-sm font-bold text-[#838383] block mb-2"
               >
                 Password
