@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React, { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useMediaQuery } from "react-responsive";
@@ -7,25 +8,31 @@ import huluLogos from "../public/src/images/logos.png";
 import huluLogo from "../public/src/images/logo.png";
 import Cover from "../components/Landing/Cover";
 import Event from "../components/Landing/Event";
+import ConnexionPopUp from "../components/Landing/ConnexionPopUp";
 import {
   landingEventsMobile,
   landingEventsLaptop,
 } from "../utils/landingEvents";
-import Login from "../components/Landing/Login";
 
 export default function Home() {
-  // Détecte lorsqu'on est sur un grand écran
+  // detect large screen
   const isLargeScreen = useMediaQuery({
     query: "(min-width: 640px)",
   });
 
-  // Détecte lorsqu'on est sur un petit écran
+  // detect small screen
   const isSmallScreen = useMediaQuery({
     query: "(max-width: 640px)",
   });
+
+  const [showConnexionPopUp, setShowConnexionPopUp] = useState(false);
+
   return (
     <>
-      <Login />
+      {showConnexionPopUp && (
+        <ConnexionPopUp setShowConnexionPopUp={setShowConnexionPopUp} />
+      )}
+
       <header>
         <div className="bg-[url('/src/images/header.jpg')] bg-cover h-screen flex justify-center items-center px-[40px] py-[100px]">
           <div className="flex flex-col items-center gap-y-6">
@@ -60,7 +67,10 @@ export default function Home() {
             <div className="absolute top-5 left-5">
               <Image src={huluLogo} width={60} height={20} />
             </div>
-            <p className="text-white uppercase absolute top-5 right-5 cursor-pointer">
+            <p
+              className="text-white uppercase absolute top-5 right-5 cursor-pointer"
+              onClick={() => setShowConnexionPopUp(true)}
+            >
               Log in
             </p>
           </div>

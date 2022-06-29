@@ -1,4 +1,4 @@
-// connexion à mongoDB de façon optimisé
+// Optimize DB connexion
 
 import { MongoClient } from "mongodb";
 
@@ -22,7 +22,7 @@ if (!dbName) {
 
 export async function connectToDatabase() {
   if (cachedClient && cachedDb) {
-    console.log("cache existant, connexion réussi");    
+    console.log("existing cached, successfull connexion");
     return { client: cachedClient, db: cachedDb };
   }
 
@@ -35,6 +35,6 @@ export async function connectToDatabase() {
 
   cachedClient = client;
   cachedDb = db;
-  console.log("aucun cache, connexion réussi");
+  console.log("no existing cached, successfull connexion");
   return { client, db };
 }
