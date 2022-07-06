@@ -8,6 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
 import huluLogo from "../public/src/images/logo.png";
+import MovieList from "../components/MovieList";
 
 function catalog() {
   return (
@@ -58,45 +59,34 @@ function catalog() {
 
       <main>
         <nav>
-          <ul className="flex justify-between items-center gap-x-8 overflow-scroll">
-            <li className="text-white cursor-pointer">
-              <p>Trending</p>
-            </li>
+          <ul className="flex justify-between items-center gap-x-8 overflow-scroll xl:overflow-hidden">
+            <li className="text-white cursor-pointer">Trending</li>
             <li className="text-white cursor-pointer whitespace-nowrap">
-              <p>Top Rated</p>
+              Top Rated
             </li>
-            <li className="text-white cursor-pointer">
-              <p>Action</p>
-            </li>
-            <li className="text-white cursor-pointer">
-              <p>Comedy</p>
-            </li>
-            <li className="text-white cursor-pointer">
-              <p>Horror</p>
-            </li>
-            <li className="text-white cursor-pointer">
-              <p>Romance</p>
-            </li>
-            <li className="text-white cursor-pointer">
-              <p>Mystery</p>
-            </li>
+            <li className="text-white cursor-pointer">Action</li>
+            <li className="text-white cursor-pointer">Comedy</li>
+            <li className="text-white cursor-pointer">Horror</li>
+            <li className="text-white cursor-pointer">Romance</li>
+            <li className="text-white cursor-pointer">Mystery</li>
             <li className="text-white cursor-pointer whitespace-nowrap">
-              <p>Sci-fi</p>
+              Sci-fi
             </li>
-            <li className="text-white cursor-pointer">
-              <p>Western</p>
-            </li>
-            <li className="text-white cursor-pointer">
-              <p>Animation</p>
-            </li>
+            <li className="text-white cursor-pointer">Western</li>
+            <li className="text-white cursor-pointer">Animation</li>
             <li className="text-white cursor-pointer whitespace-nowrap">
-              <p>TV Movie</p>
+              TV Movie
             </li>
           </ul>
         </nav>
+
+        {/* Movie list */}
+        <MovieList />
       </main>
     </div>
   );
 }
 
 export default catalog;
+
+
