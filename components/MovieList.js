@@ -3,15 +3,14 @@ import axios from "axios";
 
 import MovieCard from "./MovieCard";
 
-function MovieList() {
-  const [parameter, setParameter] = useState("trending/all/week");
+function MovieList({ categoryIndex }) {
   const [filmsList, setFilmsList] = useState([]);
 
   const MDB_IMG_URL = "https://image.tmdb.org/t/p/original";
 
-  const firstLoad = async () => {
+  const getFilmsData = async () => {
     const res = await axios.get(`http://localhost:3000/api/getAllFilms`, {
-      params: parameter,
+      params: categoryIndex,
     });
 
     console.log(res);
@@ -20,19 +19,17 @@ function MovieList() {
   };
 
   useEffect(() => {
-    firstLoad();
-  });
+    getFilmsData();
+  }, [categoryIndex]);
 
   return (
-    <div>
-      <h1>This is movie list</h1>
-
+    <div className="mt-10 mx-auto grid grid-cols-1 gap-5 justify-center sm:grid-cols-2 lg:grid-cols-3">
       {filmsList.map((x) => (
         <MovieCard
           key={x.id}
-          imgSrc={`${MDB_IMG_URL}${x.poster_path}`}
+          imgSrc={`${MDB_IMG_URL}${x.backdrop_path}`}
           overview={x.overview}
-          title={x.title}
+          title={x.original_title || x.original_name}
         />
       ))}
     </div>

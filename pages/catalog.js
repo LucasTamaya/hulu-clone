@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import BoltIcon from "@mui/icons-material/Bolt";
@@ -11,8 +11,10 @@ import huluLogo from "../public/src/images/logo.png";
 import MovieList from "../components/MovieList";
 
 function catalog() {
+  const [categoryIndex, setCategoryIndex] = useState("0");
+
   return (
-    <div className="bg-[#333333] p-5">
+    <div className="bg-[#151516] p-5">
       <header className="flex flex-col justify-center items-center gap-y-10 mb-10 sm:flex-row sm:justify-between">
         <nav className="sm:flex-1 max-w-[450px]">
           <ul className="flex items-center gap-x-3 sm:justify-between">
@@ -60,33 +62,80 @@ function catalog() {
       <main>
         <nav>
           <ul className="flex justify-between items-center gap-x-8 overflow-scroll xl:overflow-hidden">
-            <li className="text-white cursor-pointer">Trending</li>
-            <li className="text-white cursor-pointer whitespace-nowrap">
+            <li
+              className="text-white cursor-pointer"
+              onClick={() => setCategoryIndex("0")}
+            >
+              Trending
+            </li>
+            <li
+              className="text-white cursor-pointer whitespace-nowrap"
+              onClick={() => setCategoryIndex("1")}
+            >
               Top Rated
             </li>
-            <li className="text-white cursor-pointer">Action</li>
-            <li className="text-white cursor-pointer">Comedy</li>
-            <li className="text-white cursor-pointer">Horror</li>
-            <li className="text-white cursor-pointer">Romance</li>
-            <li className="text-white cursor-pointer">Mystery</li>
-            <li className="text-white cursor-pointer whitespace-nowrap">
+            <li
+              className="text-white cursor-pointer"
+              onClick={() => setCategoryIndex("2")}
+            >
+              Action
+            </li>
+            <li
+              className="text-white cursor-pointer"
+              onClick={() => setCategoryIndex("3")}
+            >
+              Comedy
+            </li>
+            <li
+              className="text-white cursor-pointer"
+              onClick={() => setCategoryIndex("4")}
+            >
+              Horror
+            </li>
+            <li
+              className="text-white cursor-pointer"
+              onClick={() => setCategoryIndex("5")}
+            >
+              Romance
+            </li>
+            <li
+              className="text-white cursor-pointer"
+              onClick={() => setCategoryIndex("6")}
+            >
+              Mystery
+            </li>
+            <li
+              className="text-white cursor-pointer whitespace-nowrap"
+              onClick={() => setCategoryIndex("7")}
+            >
               Sci-fi
             </li>
-            <li className="text-white cursor-pointer">Western</li>
-            <li className="text-white cursor-pointer">Animation</li>
-            <li className="text-white cursor-pointer whitespace-nowrap">
+            <li
+              className="text-white cursor-pointer"
+              onClick={() => setCategoryIndex("8")}
+            >
+              Western
+            </li>
+            <li
+              className="text-white cursor-pointer"
+              onClick={() => setCategoryIndex("9")}
+            >
+              Animation
+            </li>
+            <li
+              className="text-white cursor-pointer whitespace-nowrap"
+              onClick={() => setCategoryIndex("10")}
+            >
               TV Movie
             </li>
           </ul>
         </nav>
 
         {/* Movie list */}
-        <MovieList />
+        <MovieList categoryIndex={categoryIndex} />
       </main>
     </div>
   );
 }
 
 export default catalog;
-
-

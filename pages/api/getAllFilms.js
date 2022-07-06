@@ -1,15 +1,15 @@
 import axios from "axios";
-import { stringify } from "postcss";
 
 import { nextCors } from "../../utils/cors";
+import requests from "../../utils/movieRequests";
 
 export default async function handler(req, res) {
   // CORS middleware
   await nextCors(req, res);
 
-  const parameter = req.query[0];
+  const index = req.query[0];
 
-  const url = `${process.env.MDB_BASE_URL}${parameter}${process.env.MDB_API_KEY}`;
+  const url = requests[index];
 
   try {
     const data = await axios.get(url);
