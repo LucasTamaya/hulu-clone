@@ -23,6 +23,7 @@
     "nextjs-cors": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
+    "react-flip-move": "^3.0.4",
     "react-hook-form": "^7.33.0",
     "react-responsive": "^9.0.0-beta.10",
     "yarn": "^1.22.19",
