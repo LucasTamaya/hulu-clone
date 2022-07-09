@@ -9,6 +9,7 @@ import loginValidation from "../../utils/formValidationSchema/loginValidation";
 import AuthLoader from "../Loaders/AuthLoader";
 import ConnexionError from "../Landing/ConnexionStatus/ConnexionError";
 import ConnexionSuccess from "../Landing/ConnexionStatus/ConnexionSuccess";
+import template from "../../utils/template";
 
 function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
   const [loading, setLoading] = useState(false);
@@ -29,7 +30,7 @@ function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
     setLoading(true);
     setError("");
 
-    const res = await axios.post(`http://localhost:3000/api/auth/login`, {
+    const res = await axios.post(`${template}api/auth/login`, {
       email: input.email,
       password: input.password,
     });

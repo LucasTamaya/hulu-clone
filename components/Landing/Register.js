@@ -9,6 +9,7 @@ import registerValidation from "../../utils/formValidationSchema/registerValidat
 import AuthLoader from "../Loaders/AuthLoader";
 import ConnexionError from "../Landing/ConnexionStatus/ConnexionError";
 import ConnexionSuccess from "../Landing/ConnexionStatus/ConnexionSuccess";
+import template from "../../utils/template";
 
 function Register({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
   const [loading, setLoading] = useState(false);
@@ -29,7 +30,7 @@ function Register({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
     setLoading(true);
     setError("");
 
-    const res = await axios.post(`http://localhost:3000/api/auth/register`, {
+    const res = await axios.post(`${template}api/auth/register`, {
       email: input.email,
       username: input.username,
       password: input.password,
