@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import huluLogos from "../../public/src/images/logos.png";
 import huluLogo from "../../public/src/images/logo.png";
 

@@ -48,7 +48,7 @@ function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
       console.log("you're connected");
       setData("Successfull connexion !");
       setLoading(false);
-      router.push("/catalog");
+      router.push("/catalog?genre=Trending");
     }
   };
 
@@ -90,7 +90,7 @@ function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
                     className="px-3 py-1 border border-black outline-0 rounded w-full sm:w-80 sm:h-12"
                     onChange={onChange}
                   />
-                  {/* si il y a une erreur dans le champs, on affiche le message correspondant à l'erreur */}
+                  {/* error message if error */}
                   {!!error && (
                     <p className="text-red-500 text-xs">{error?.message}</p>
                   )}
@@ -121,7 +121,7 @@ function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
                     className="px-3 py-1 border border-black outline-0 rounded w-full sm:w-80 sm:h-12"
                     onChange={onChange}
                   />
-                  {/* si il y a une erreur dans le champs, on affiche le message correspondant à l'erreur */}
+                  {/* error message if error */}
                   {!!error && (
                     <p className="text-red-500 text-xs">{error?.message}</p>
                   )}

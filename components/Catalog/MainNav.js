@@ -1,5 +1,4 @@
 import React from "react";
-
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import BoltIcon from "@mui/icons-material/Bolt";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
