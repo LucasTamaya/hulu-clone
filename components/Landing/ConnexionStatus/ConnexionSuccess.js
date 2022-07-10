@@ -6,7 +6,7 @@ function ConnexionSuccess({ message }) {
 
   return (
     <div
-      className={`fixed top-[15px] w-fit flex items-center gap-x-2 bg-green-500 p-3 rounded transition ease animate-authTransitionInSm md:top-[50px] md:animate-authTransitionInMd ${
+      className={`fixed bottom-[35px] md:top-[50px] w-fit flex items-center gap-x-2 bg-green-500 p-3 rounded transition ease animate-authTransitionInSm md:animate-authTransitionInMd ${
         hideMessage && "opacity-0"
       }`}
     >

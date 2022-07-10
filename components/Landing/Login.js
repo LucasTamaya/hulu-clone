@@ -54,7 +54,7 @@ function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
   };
 
   return (
-    <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center bg-black/75 z-10">
+    <div className="fixed top-0 left-0 w-full h-screen overflow-hidden flex justify-center items-center bg-black/75 z-[100]">
       {error && <ConnexionError message={error} />}
 
       {data && <ConnexionSuccess message={data} />}
@@ -135,7 +135,7 @@ function Login({ setShowConnexionPopUp, setShowLogin, setShowRegister }) {
           </p>
           <button
             type="submit"
-            className="flex justify-center items-center h-[50px] uppercase text-white p-2 mb-[120px] bg-[#838383] rounded cursor-pointer"
+            className="flex justify-center items-center h-[50px] uppercase text-white p-2 mb-10 bg-[#838383] rounded cursor-pointer"
           >
             {!loading ? <>Log In</> : <AuthLoader />}
           </button>

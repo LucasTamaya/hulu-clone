@@ -8,7 +8,7 @@ function LiveTvMakeItBetter() {
       <h3 className="text-[#00ed82] text-sm uppercase sm:text-base">
         Hulu + live tv, now with disney+ and espn+
       </h3>
-      <h2 className="text-white text-3xl sm:text-5xl font-bold">
+      <h2 className="text-white text-3xl text-center sm:text-5xl font-bold">
         Live TV Makes It Better
       </h2>
       <p className="text-white text-center sm:text-lg max-w-[730px]">

@@ -16,21 +16,33 @@ function Event({ eventData }) {
     >
       <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center pt-8 gap-y-6 sm:justify-center lg:items-start lg:pl-[320px] bg-black/30">
         <nav>
-          <ul className="flex items-center gap-x-6">
+          <ul className="flex items-center gap-x-6 px-8">
             <li
-              className="relative text-white text-xs uppercase font-bold cursor-pointer after:absolute after:top-8 after:left-0 after:content-[''] after:w-full after:h-[5px] after:bg-white"
+              className={`relative text-xs text-center uppercase font-bold cursor-pointer transition ${
+                index === 0
+                  ? "text-white sm:after:absolute sm:after:top-8 sm:after:left-0 sm:after:content-[''] sm:after:w-full sm:after:h-[5px] sm:after:bg-white"
+                  : "text-[#cccccc]"
+              }`}
               onClick={() => setIndex(0)}
             >
               Live sports
             </li>
             <li
-              className="text-[#cccccc] text-xs uppercase font-bold cursor-pointer"
+              className={`relative text-xs text-center uppercase font-bold cursor-pointer transition ${
+                index === 1
+                  ? "text-white sm:after:absolute sm:after:top-8 sm:after:left-0 sm:after:content-[''] sm:after:w-full sm:after:h-[5px] sm:after:bg-white"
+                  : "text-[#cccccc]"
+              }`}
               onClick={() => setIndex(1)}
             >
               Breaking news
             </li>
             <li
-              className="text-[#cccccc] text-xs uppercase font-bold cursor-pointer"
+              className={`relative text-xs text-center uppercase font-bold cursor-pointer transition ${
+                index === 2
+                  ? "text-white sm:after:absolute sm:after:top-8 sm:after:left-0 sm:after:content-[''] sm:after:w-full sm:after:h-[5px] sm:after:bg-white"
+                  : "text-[#cccccc]"
+              }`}
               onClick={() => setIndex(2)}
             >
               Biggest events

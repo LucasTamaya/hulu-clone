@@ -27,13 +27,12 @@ export default function Home() {
 
   return (
     <>
-      {showConnexionPopUp && (
-        <ConnexionPopUp setShowConnexionPopUp={setShowConnexionPopUp} />
-      )}
-
       <Header setShowConnexionPopUp={setShowConnexionPopUp} />
 
       <main className="bg-[#151516] pt-[50px] sm-pt[100px]">
+        {showConnexionPopUp && (
+          <ConnexionPopUp setShowConnexionPopUp={setShowConnexionPopUp} />
+        )}
         <AllTheTvYouLove />
         <LiveTvMakeItBetter />
         {isLargeScreen && <Event eventData={landingEventsLaptop} />}

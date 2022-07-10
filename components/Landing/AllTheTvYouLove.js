@@ -10,7 +10,7 @@ function AllTheTvYouLove() {
           Included in all plans
         </h3>
 
-        <h2 className="text-white font-bold text-3xl sm:text-5xl">
+        <h2 className="text-white text-center font-bold text-3xl sm:text-5xl">
           All The TV You Love
         </h2>
 
